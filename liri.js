@@ -36,7 +36,8 @@ let getMyMusic = function() {
     });
 }
 
-request.onreadystatechange
+//need to make a call for OMBD
+//request.onreadystatechange
 
 //events 
 getMyTweets();
