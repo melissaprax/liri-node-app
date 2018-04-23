@@ -10,6 +10,8 @@ let Spotify = require('node-spotify-api');
 
 let keys = require('./keys');
 
+let request = require('request');
+
 //functions 
 
 let getMyTweets = function() {
@@ -34,6 +36,7 @@ let getMyMusic = function() {
     });
 }
 
+request.onreadystatechange
 
 //events 
 getMyTweets();
