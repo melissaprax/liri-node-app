@@ -6,6 +6,8 @@
 require('dotenv').config();
 let Twitter = require('twitter');
 
+let Spotify = require('node-spotify-api');
+
 let keys = require('./keys');
 
 //functions 
@@ -21,6 +23,18 @@ let getMyTweets = function() {
     })
 }
 
+let getMyMusic = function() {
+    let client = new Spotify(keys.spotify);
+    client.request('https://api.spotify.com/v1/tracks/7yCPwWs66K8Ba5lFuU2bcx')
+    .then(function(data) {
+      console.log(data); 
+    })
+    .catch(function(err) {
+      console.error('Error occurred: ' + err); 
+    });
+}
+
 
 //events 
 getMyTweets();
+getMyMusic();
